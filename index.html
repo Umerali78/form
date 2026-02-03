@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <div class="header">
+                <h1><i class="fas fa-user-plus"></i> Premium Registration</h1>
+                <p>Complete your profile with our premium options</p>
+            </div>
+
+            <form id="myForm">
+                <!-- Personal Info -->
+                <div class="section">
+                    <h2><i class="fas fa-user-circle"></i> Personal Information</h2>
+                    
+                    <div class="input-group">
+                        <label for="name">Full Name <span style="color: #ff4757;">*</span></label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email Address <span style="color: #ff4757;">*</span></label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="example@gmail.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="phone">Phone Number <span style="color: #666; font-size: 13px;">(Optional)</span></label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-phone-alt"></i>
+                            <input type="tel" id="phone" placeholder="+92 300 1234567">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Options Section -->
+                <div class="section">
+                    <h2><i class="fas fa-layer-group"></i> Select Your Plan</h2>
+                    <p style="color: #666; font-size: 15px; margin-bottom: 20px; font-weight: 500;">Choose your preferred plan (Select at least one)</p>
+                    
+                    <div class="options">
+                        <!-- Option 1 -->
+                        <div class="option" data-value="basic">
+                            <input type="checkbox" id="option1" name="options" value="Basic Plan">
+                            <label for="option1">
+                                <span class="option-title">
+                                    <i class="fas fa-star"></i> Basic Plan
+                                </span>
+                                <span class="option-desc">Perfect for individuals just starting out with essential features</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Option 2 -->
+                        <div class="option" data-value="standard">
+                            <input type="checkbox" id="option2" name="options" value="Standard Plan">
+                            <label for="option2">
+                                <span class="option-title">
+                                    <i class="fas fa-crown"></i> Standard Plan
+                                </span>
+                                <span class="option-desc">Best value for regular users with enhanced capabilities</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Option 3 -->
+                        <div class="option" data-value="premium">
+                            <input type="checkbox" id="option3" name="options" value="Premium Plan">
+                            <label for="option3">
+                                <span class="option-title">
+                                    <i class="fas fa-gem"></i> Premium Plan
+                                </span>
+                                <span class="option-desc">Advanced features and priority support for professionals</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Option 4 -->
+                        <div class="option" data-value="family">
+                            <input type="checkbox" id="option4" name="options" value="Family Plan">
+                            <label for="option4">
+                                <span class="option-title">
+                                    <i class="fas fa-users"></i> Family Plan
+                                </span>
+                                <span class="option-desc">Share with up to 5 family members, perfect for households</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Option 5 -->
+                        <div class="option" data-value="business">
+                            <input type="checkbox" id="option5" name="options" value="Business Plan">
+                            <label for="option5">
+                                <span class="option-title">
+                                    <i class="fas fa-briefcase"></i> Business Plan
+                                </span>
+                                <span class="option-desc">Complete suite for companies with team collaboration tools</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Selected Options Display -->
+                    <div class="selected-box">
+                        <h3><i class="fas fa-check-double"></i> Your Selected Plans</h3>
+                        <div id="selectedList" class="selected-list">
+                            <span style="color: #999; font-style: italic;">No plans selected yet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="section">
+                    <h2><i class="fas fa-comments"></i> Additional Information</h2>
+                    
+                    <div class="input-group">
+                        <label for="message">Special Requirements</label>
+                        <textarea id="message" placeholder="Tell us about any special needs or preferences..." rows="4"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label style="margin-bottom: 15px;">How did you hear about us?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="source" value="Friend">
+                                <span class="radio-custom"></span>
+                                <span>Friend Referral</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="source" value="Social Media">
+                                <span class="radio-custom"></span>
+                                <span>Social Media</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="source" value="Search Engine">
+                                <span class="radio-custom"></span>
+                                <span>Search Engine</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="source" value="Advertisement">
+                                <span class="radio-custom"></span>
+                                <span>Advertisement</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button type="submit" class="btn submit-btn">
+                        <i class="fas fa-paper-plane"></i> Submit Application
+                    </button>
+                    <button type="reset" class="btn reset-btn">
+                        <i class="fas fa-redo-alt"></i> Clear Form
+                    </button>
+                </div>
+                
+                <!-- Form Message -->
+                <div id="messageBox" class="message-box"></div>
+            </form>
+            
+            <!-- Footer -->
+            <div class="footer">
+                <i class="fas fa-shield-alt"></i>
+                <p>Your information is protected with 256-bit SSL encryption</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Application Submitted!</h2>
+            <p id="modalMessage">Your registration has been received successfully.</p>
+            <button class="modal-btn" onclick="closeModal()">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('myForm');
+            const checkboxes = document.querySelectorAll('input[name="options"]');
+            const selectedList = document.getElementById('selectedList');
+            const messageBox = document.getElementById('messageBox');
+            const successModal = document.getElementById('successModal');
+            const optionDivs = document.querySelectorAll('.option');
+            
+            let selectedOptions = [];
+            
+            // Update selected display
+            function updateSelectedDisplay() {
+                if (selectedOptions.length === 0) {
+                    selectedList.innerHTML = '<span style="color: #999; font-style: italic;">No plans selected yet</span>';
+                    return;
+                }
+                
+                let html = '';
+                selectedOptions.forEach(option => {
+                    html += `
+                        <div class="selected-item">
+                            ${option}
+                            <i class="fas fa-times" onclick="removeOption('${option}')"></i>
+                        </div>
+                    `;
+                });
+                
+                selectedList.innerHTML = html;
+            }
+            
+            // Remove option function
+            window.removeOption = function(optionValue) {
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.value === optionValue) {
+                        checkbox.checked = false;
+                        checkbox.closest('.option').classList.remove('selected');
+                        selectedOptions = selectedOptions.filter(opt => opt !== optionValue);
+                        updateSelectedDisplay();
+                    }
+                });
+            };
+            
+            // Handle checkbox changes
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const optionDiv = this.closest('.option');
+                    
+                    if (this.checked) {
+                        if (!selectedOptions.includes(this.value)) {
+                            selectedOptions.push(this.value);
+                        }
+                        optionDiv.classList.add('selected');
+                        
+                        // Add animation
+                        optionDiv.style.transform = 'translateX(10px) scale(1.02)';
+                        setTimeout(() => {
+                            optionDiv.style.transform = 'translateX(0) scale(1)';
+                        }, 300);
+                    } else {
+                        selectedOptions = selectedOptions.filter(opt => opt !== this.value);
+                        optionDiv.classList.remove('selected');
+                    }
+                    
+                    updateSelectedDisplay();
+                });
+            });
+            
+            // Click on option div to toggle checkbox
+            optionDivs.forEach(div => {
+                div.addEventListener('click', function(e) {
+                    if (e.target.type !== 'checkbox' && !e.target.classList.contains('fa-times')) {
+                        const checkbox = this.querySelector('input[type="checkbox"]');
+                        checkbox.checked = !checkbox.checked;
+                        checkbox.dispatchEvent(new Event('change'));
+                    }
+                });
+            });
+            
+            // Form validation
+            function validateForm() {
+                const name = document.getElementById('name').value.trim();
+                if (name === '') {
+                    showMessage('Please enter your full name', 'error');
+                    document.getElementById('name').focus();
+                    return false;
+                }
+                
+                const email = document.getElementById('email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email === '') {
+                    showMessage('Please enter your email address', 'error');
+                    document.getElementById('email').focus();
+                    return false;
+                }
+                if (!emailRegex.test(email)) {
+                    showMessage('Please enter a valid email address', 'error');
+                    document.getElementById('email').focus();
+                    return false;
+                }
+                
+                if (selectedOptions.length === 0) {
+                    showMessage('Please select at least one plan', 'error');
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            // Show message
+            function showMessage(message, type) {
+                messageBox.textContent = message;
+                messageBox.className = `message-box ${type}`;
+                
+                // Auto hide after 5 seconds
+                setTimeout(() => {
+                    messageBox.style.display = 'none';
+                }, 5000);
+            }
+            
+            // Close modal
+            window.closeModal = function() {
+                successModal.style.display = 'none';
+                form.reset();
+                selectedOptions = [];
+                updateSelectedDisplay();
+                
+                // Remove selected classes
+                optionDivs.forEach(div => {
+                    div.classList.remove('selected');
+                });
+                
+                // Hide message box
+                messageBox.style.display = 'none';
+            };
+            
+            // Form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                if (validateForm()) {
+                    const formData = {
+                        name: document.getElementById('name').value.trim(),
+                        email: document.getElementById('email').value.trim(),
+                        phone: document.getElementById('phone').value.trim(),
+                        plans: selectedOptions,
+                        message: document.getElementById('message').value.trim(),
+                        source: document.querySelector('input[name="source"]:checked')?.value || 'Not specified'
+                    };
+                    
+                    // Update modal message
+                    const planText = selectedOptions.length === 1 ? 'plan' : 'plans';
+                    document.getElementById('modalMessage').textContent = 
+                        `Thank you ${formData.name}! Your ${selectedOptions.length} ${planText} have been registered successfully. Confirmation has been sent to ${formData.email}.`;
+                    
+                    // Show success modal
+                    successModal.style.display = 'flex';
+                    
+                    // Log data
+                    console.log('Form submitted successfully!', formData);
+                }
+            });
+            
+            // Form reset
+            form.addEventListener('reset', function() {
+                selectedOptions = [];
+                updateSelectedDisplay();
+                messageBox.style.display = 'none';
+                
+                // Remove selected classes
+                optionDivs.forEach(div => {
+                    div.classList.remove('selected');
+                });
+            });
+            
+            // Initialize
+            updateSelectedDisplay();
+        });
+    </script>
+</body>
+</html>
